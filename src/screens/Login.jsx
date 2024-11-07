@@ -29,29 +29,28 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen"> 
-<div className="w-full container m-auto px-10">
-
-    <form onSubmit={handleLogin} className="flex flex-col max-w-lg mx-auto">
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        className="mb-2 p-2 border"
-        />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        className="mb-2 p-2 border"
-        />
-      <button type="submit" className="bg-blue-500 text-white p-2">
-        {loading ? "Loaging..." : "Login"}
-      </button>
-    </form>
-        </div>
-        </div>
+    <div className="flex justify-center items-center h-screen">
+      <div className="w-full container m-auto px-10">
+        <form onSubmit={handleLogin} className="flex flex-col max-w-lg mx-auto">
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="mb-2 p-2 border"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="mb-2 p-2 border"
+          />
+          <button type="submit" className="bg-blue-500 text-white p-2">
+            {loading ? "Loading..." : "Login"}
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }
